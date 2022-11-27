@@ -1,0 +1,110 @@
+.file-wrap {
+  z-index: 9999;
+  display: flex;
+  overflow: visible;
+}
+
+.file {
+  width: 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  & .file-icon {
+    span {
+      font-size: 32px;
+      color: $font-primary-color;
+    }
+  }
+
+  & .file-name {
+    font-size: 14px;
+    color: $font-primary-color;
+    text-align: center;
+    word-break: break-all;
+  }
+}
+
+.file.active {
+  background: rgba(0, 0, 0, 0.1);
+
+  & .file-icon {
+    span {
+      color: $steelBlue-color;
+    }
+  }
+
+  & .file-name {
+    color: $steelBlue-color;
+  }
+}
+
+.file-select {
+  display: none;
+  width: 300px;
+  position: absolute;
+  z-index: 9999;
+  right: 400px;
+  top: -25px;
+  background-color: $font-primary-color;
+  border-radius: 7px;
+  color: white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent $font-primary-color;
+  }
+
+  & li {
+    padding: 10px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 0.1s ease;
+    cursor: pointer;
+
+    span {
+      margin-right: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    &:hover {
+      background-color: $steelBlue-color;
+    }
+
+    &:first-child:hover {
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+    }
+
+    &:last-child:hover {
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+    }
+  }
+}
+
+.file-select.active {
+  display: block;
+}

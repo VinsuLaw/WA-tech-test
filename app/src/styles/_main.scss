@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&;display=swap");
+
+@import "./variables";
+@import "./loader";
+
+@import "./auth.scss";
+@import "./home.scss";
+@import "./modal.scss";
+@import "./task.form.scss";
+@import "./sidebar.scss";
+@import "./file.scss";
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.space-beetween {
+  display: flex;
+  justify-content: space-between;
+}

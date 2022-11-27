@@ -1,0 +1,184 @@
+.sidebar {
+  width: 450px;
+  height: 100vh;
+  //overflow-y: visible;
+  //overflow-y: auto;
+
+  background-color: $app-theme-card;
+  border-left: 1px solid $btn-disabled-font;
+  position: absolute;
+  right: 0;
+}
+
+.sidebar_content {
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 50px;
+
+  & .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    span {
+      font-size: 28px;
+      margin-right: 15px;
+      cursor: pointer;
+
+      &:hover {
+        color: $steelBlue-color;
+      }
+    }
+
+    span.completed {
+      color: $steelBlue-color;
+    }
+  }
+
+  & .default-inp {
+    width: 100%;
+    outline: none;
+    border: 1px solid $border-card;
+    border-radius: 7px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+
+    &:focus {
+      border-color: $steelBlue-color;
+      outline: 1px solid $steelBlue-color;
+    }
+  }
+
+  & .description {
+    margin-top: 10px;
+
+    #description {
+      min-width: 370px;
+      max-width: 370px;
+      min-height: 200px;
+      max-height: 200px;
+      outline: none;
+      border: 1px solid $border-card;
+      border-radius: 7px;
+      padding: 10px;
+
+      &:focus {
+        border-color: $steelBlue-color;
+        outline: 1px solid $steelBlue-color;
+      }
+    }
+  }
+
+  & .delete {
+    margin-top: 15px;
+
+    button {
+      width: 100%;
+      background-color: brown;
+      color: white;
+      border-radius: 7px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+
+      transition: all 0.1s ease;
+
+      &:hover {
+        background-color: rgb(108, 29, 29);
+      }
+    }
+  }
+
+  & .attachments {
+    margin-top: 30px;
+    position: relative;
+
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    #file {
+      display: none;
+    }
+
+    .attachments_content {
+      max-height: 200px;
+      overflow: auto;
+      margin-top: 15px;
+      width: 100%;
+      background-color: white;
+      border-radius: 7px;
+      padding: 10px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 10px;
+    }
+  }
+
+  .attachment-action {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 7px;
+
+    transition: all 0.1s ease;
+
+    &:hover {
+      background-color: $steelBlue-color;
+      color: white;
+    }
+  }
+
+  .att-add {
+    background-color: greenyellow;
+    margin-right: 5px;
+  }
+
+  .att-upl {
+    background-color: $font-primary-color;
+    color: white;
+  }
+
+  .att-upl.disabled {
+    background-color: $btn-disabled-font;
+  }
+
+  & .sidebar_footer {
+    position: absolute;
+    width: 395px;
+    bottom: 10px;
+
+    .sidebar_content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        color: $font-primary-color;
+      }
+    }
+  }
+
+  & .attachments-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: $font-primary-color;
+    //padding-left: 10px;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}
